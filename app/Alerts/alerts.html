@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<body>
+	<link rel="stylesheet" type="text/css" href="Alerts/alerts.css"></link>
+<head>
+
+</head>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<button class="btn btn-primary btn-sm" data-target="#alertsModal"
+				data-toggle="modal">ALERTS</button>
+			<div class="modal" id="alertsModal" tabindex="-1">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">ALERTS</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+
+								<div class="form-group">
+									<label class="control-label col-sm-5">ALERT STATUS:</label>
+									<div class="col-sm-5">
+										<select class="form-control"
+											ng-options="AlertsDataSources as AlertsDataSources.alertStatus for AlertsDataSources in AlertsDataSources track by AlertsDataSources.alertStatusesId"
+											ng-model="newAlertStatuses"></select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-5">ALERT IMPACT
+										AREAS</label>
+									<div class="col-sm-5">
+										<select class="form-control"
+											ng-options="productsDataSource as productsDataSource.alertImpactAreas for productsDataSource in productsDataSources track by productsDataSource.alertImpactAreaId"
+											ng-model="newAlertImpactAreas">
+
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-5"> DIVISIONS:</label>
+									<div class="col-sm-5">
+										<select class="form-control" multiple ng-model="newDivisions"
+											ng-options="divisionsDataSource as divisionsDataSource.divisionArea for divisionsDataSource in divisionsDataSources track by divisionsDataSource.divisionId">
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-sm-5">START DATE:</label>
+									<div class="col-sm-5">
+										<input type="text" class="form-control" name="date"
+											id="datepicker" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-5">END DATE:</label>
+									<div class="col-sm-5">
+										<input type="text" class="form-control" name="enddate"
+											id="datepicker1" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-5">DESCRIPTION:</label>
+									<div class="col-sm-5">
+										<input type="text" class="form-control" name="desc"
+											placeholder="enter the desc" maxlength="1000">
+										<div class="form-group">
+											<div class="col-sm-5">
+												<input type="submit" value="Submit">
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+									$(function() {
+										$("#datepicker").datepicker();
+									});
+								</script>
+<script type="text/javascript">
+									$('#dt1').datetimepicker({
+										locale : 'en-GB'
+									});
+								</script>
+<script type="text/javascript">
+									$(function() {
+										$("#datepicker1").datepicker();
+									});
+								</script>
+<script type="text/javascript">
+									$('#dt1').datetimepicker({
+										locale : 'en-GB'
+									});
+								</script>
+</html>

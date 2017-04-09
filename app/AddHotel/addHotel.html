@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>A&R SLOUTIONS SERVICES</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<style>
+.jumbotron {
+	background-color: rgba(0, 0, 0, 1.00);
+	color: #ffffff;
+}
+</style>
+
+
+	<div class="jumbotron text-center">
+		<h1>Hotel</h1>
+		<form class="form-inline">
+			<div class="input-group">
+				<input type="hotel" class="form-control" size="50"
+					placeholder="search hotels" required>
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-danger">Search</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label class="control-label col-sm-5">LOCATION:</label>
+			<div class=col-sm-4>
+				<select class="form-control" ng-model="newLocation"
+					ng-options="x for x in location">
+				</select> 
+			</div>
+		</div>
+
+		<div class="form-group">
+
+			<label class="control-label col-sm-5">HOTEL NAMES:</label>
+			<div class="col-sm-4">
+		<select class="form-control" ng-model="newHotelNames"
+					ng-options="x for x in hotelnames">
+				</select> 
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-5">NO OF ROOMS:</label>
+			<div class="col-sm-4">
+				<select class="form-control" ng-model="newNoOfRooms"
+					ng-options="x for x in noOfRooms">
+				</select> 
+			</div>
+		</div>
+    	<div class="form-group" ng-click="addHotelList()">
+			<div class="col-sm-offset-6 col-sm-16">
+				<input type="button" class="btn btn-primary" value="submit" />
+			</div>
+		</div>
+</body>
+</html>

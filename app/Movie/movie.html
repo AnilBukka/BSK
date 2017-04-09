@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>A&R SLOUTIONS SERVICES</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<style>
+.jumbotron {
+	background-color: rgba(0, 0, 0, 1.00);
+	color: #ffffff;
+}
+</style>
+
+
+	<div class="jumbotron text-center">
+		<h1>Movies</h1>
+		<form class="form-inline">
+			<div class="input-group">
+				<input type="movies" class="form-control" size="50"
+					placeholder="search movies" required>
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-danger">Search</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<img src="/../Movies/movies_button.jpg">
+
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label class="control-label col-sm-5">NO OF TICKETS:</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="no Of Tickets" ng-model="newNoOfTickets">
+			</div>
+			<div class="form-group" ng-click="addMovie()">
+				<div class="col-sm-offset-6 col-sm-16" class="form-control">
+					<input type="button" class="btn btn-primary" value="submit" />
+				</div>
+			</div>
+
+
+		</div>
+	
+</body>
+</html>
